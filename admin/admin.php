@@ -91,7 +91,7 @@ function av_admin_register_settings() {
  	register_setting  ( 'age-verify', '_av_overlay_color', 'av_validate_color' );
  	
  	// Background Color
- 	add_settings_field( '_av_bgcolor', __( 'Background Color' ), 'av_settings_callback_bgcolor_field', 'age-verify', 'av_settings_display' );
+ 	add_settings_field( '_av_bgcolor', __( 'Background Color', 'age_verify' ), 'av_settings_callback_bgcolor_field', 'age-verify', 'av_settings_display' );
  	register_setting  ( 'age-verify', '_av_bgcolor', 'av_validate_color' );
 	
 	do_action( 'av_register_settings' );
