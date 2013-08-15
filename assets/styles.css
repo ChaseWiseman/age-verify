@@ -1,0 +1,61 @@
+#av-overlay-wrap { 
+	position: fixed; 
+	height: 100%;
+	width: 100%;
+	background: #E6E6E6;
+	z-index: 10000;
+	display: block;
+	top: 0;
+	left: 0; 
+}
+
+#av-overlay {
+	position: fixed; 
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: white;
+	z-index: 10001;
+	padding: 30px 40px 34px;
+	-webkit-box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	   -moz-box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+	        box-shadow: 0 2px 6px rgba(100, 100, 100, 0.3);
+}
+#av-overlay h1 {
+	margin-bottom: 20px;
+}
+#av-overlay p {
+	margin-bottom: 10px;
+}
+#av-overlay .submit {
+	margin-bottom: 0;
+}
+
+#av-overlay input[type=text] {
+	width: 40px;
+	outline: none;
+}
+
+#av-overlay .error {
+	padding: 12px;
+	background-color: #ffebe8;
+	border: 1px solid #c00;
+	-webkit-border-radius: 3px;
+	   -moz-border-radius: 3px;
+	        border-radius: 3px;
+}
+
+/* Minimum width of 400 pixels. */
+@media screen and (min-width: 400px) {
+	
+	#av-overlay {
+		position: relative;
+		top: auto;
+		left: auto;
+		width: 300px;
+		height: auto;
+		margin: 100px auto 0 auto;
+	}
+	
+}
