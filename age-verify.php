@@ -5,12 +5,12 @@
  * Description: A simple way to ask visitors for their age before viewing your site.
  * Author:      Chase Wiseman
  * Author URI:  http://chasewiseman.com
- * Version:     0.2.3
+ * Version:     0.2.4
  * Text Domain: age_verify
  * Domain Path: /languages/
  *
  * @package   AgeVerify
- * @version   0.2.3
+ * @version   0.2.4
  * @author    Chase Wiseman <contact@chasewiseman.com>
  * @copyright Copyright (c) 2012, Chase Wiseman
  * @link      http://chasewiseman.com/plugins/age-verify/
@@ -165,7 +165,7 @@ class Age_Verify {
 	 */
 	public function enqueue_styles() {
 		
-		wp_enqueue_style( 'av-styles', $this->plugin_url . '/assets/styles.css' );
+		wp_enqueue_style( 'av-styles', $this->plugin_url . 'assets/styles.css' );
 	}
 	
 	/**
@@ -271,7 +271,7 @@ class Age_Verify {
 			
 			case 'checkbox' :
 				
-				if ( (int) $_POST['av_verify_confirm'] == 1 )
+				if ( isset( $_POST['av_verify_confirm'] ) && (int) $_POST['av_verify_confirm'] == 1 )
 					$is_verified = true;
 				else
 					$error = 2; // Didn't check the box
