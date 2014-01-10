@@ -2,8 +2,8 @@
 Contributors: ChaseWiseman
 Tags: age, restrict, verify
 Requires at least: 3.2
-Tested up to: 3.6
-Stable tag: 0.2.4
+Tested up to: 3.8
+Stable tag: 0.2.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,12 @@ Whatever your reasons, you may need your site's visitors to confirm their age be
 2. This is what your visitors see, using the default styling.
 
 == Changelog ==
+
+= 0.2.5 =
+* Added WordPress 3.8 compatibility 
+* Fixed a bit of text domain loading
+* Added additional actions for further extensibility
+* Adjusted some default modal styling
 
 = 0.2.4 =
 * Fixed a double slash when enqueueing the stylesheet
