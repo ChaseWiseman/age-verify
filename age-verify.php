@@ -204,6 +204,8 @@ class Age_Verify {
 		
 		<div id="av-overlay-wrap">
 			
+			<?php do_action( 'av_before_modal' ); ?>
+			
 			<div id="av-overlay">
 				
 				<h1><?php esc_html_e( av_get_the_heading() ); ?></h1>
@@ -218,6 +220,8 @@ class Age_Verify {
 				<?php do_action( 'av_after_form' ); ?>
 				
 			</div>
+			
+			<?php do_action( 'av_after_modal' ); ?>
 			
 		</div>
 	<?php }
