@@ -33,8 +33,11 @@
 }
 
 #av-overlay input[type=text] {
-	width: 40px;
+	width: 50px;
 	outline: none;
+}
+#av-overlay #av_verify_y {
+	width: 70px;
 }
 
 #av-overlay .error {
