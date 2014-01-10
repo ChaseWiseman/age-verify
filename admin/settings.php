@@ -59,6 +59,7 @@ function av_settings_callback_require_for_field() { ?>
 			<input type="radio" name="_av_require_for" value="site" <?php checked( 'site', get_option( '_av_require_for', 'site' ) ); ?>/>
 			 <?php esc_html_e( 'Entire site', 'age_verify' ); ?><br />
 		</label>
+		<br />
 		<label>
 			<input type="radio" name="_av_require_for" value="content" <?php checked( 'content', get_option( '_av_require_for', 'site' ) ); ?>/>
 			 <?php esc_html_e( 'Specific content', 'age_verify' ); ?>
@@ -82,6 +83,7 @@ function av_settings_callback_always_verify_field() { ?>
 			<input type="radio" name="_av_always_verify" value="guests" <?php checked( 'guests', get_option( '_av_always_verify', 'guests' ) ); ?>/>
 			 <?php esc_html_e( 'Guests only', 'age_verify' ); ?> <span class="description"><?php esc_html_e( 'Logged-in users will not need to verify their age.', 'age_verify' ); ?></span><br />
 		</label>
+		<br />
 		<label>
 			<input type="radio" name="_av_always_verify" value="all" <?php checked( 'all', get_option( '_av_always_verify', 'guests' ) ); ?>/>
 			 <?php esc_html_e( 'All visitors', 'age_verify' ); ?>
