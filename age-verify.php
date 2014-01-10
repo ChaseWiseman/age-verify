@@ -153,7 +153,9 @@ class Age_Verify {
 			
 		if ( file_exists( $mofile_global ) )
 			return load_textdomain( 'age_verify', $mofile_global );
-
+		
+		load_plugin_textdomain( 'age_verify' );
+		
 		return false;
 	}
 	
