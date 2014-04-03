@@ -114,6 +114,11 @@ class Age_Verify {
 			
 		endif;
 		
+		// if the input type is meant to be a link then enque the public facing javascript
+		if( get_option (' _av_input_type ', 1) == 'link'):
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		endif;
+
 		// Maybe display the overlay
 		add_action( 'wp_footer', array( $this, 'verify_overlay' ) );
 		
@@ -140,7 +145,6 @@ class Age_Verify {
 	 * @access public
 	 */
 	public function load_textdomain() {
-		
 		$locale = get_locale();
 		$locale = apply_filters( 'plugin_locale',  $locale, 'age_verify' );
 		$mofile = sprintf( 'age_verify-%s.mo', $locale );
@@ -159,6 +163,18 @@ class Age_Verify {
 		return false;
 	}
 	
+	/**
+	 * Enqueue the scripts.
+	 *
+	 * @since 0.1
+	 * @access public
+	 */
+	public function enqueue_scripts() {
+		wp_enqueue_script( 'av-scripts', $this->plugin_url . 'assets/av-scripts.js', array('jquery'), null, true);
+	}
+	
+
+
 	/**
 	 * Enqueue the styles.
 	 *

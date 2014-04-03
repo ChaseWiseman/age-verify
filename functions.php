@@ -371,15 +371,30 @@ function av_get_verify_form() {
 			$form .= esc_html( sprintf( apply_filters( 'av_confirm_text', __( 'I am at least %s years old', 'age_verify' ) ), av_get_minimum_age() ) ) . '</label></p>';
 			
 			break;
+
+		// Even simpler just click a link. Uses the header image if one exists.
+		case 'link':
+
+			$form .= '<p><input type="hidden" name="av_verify_confirm" id="av_verify_confirm" value="1" /> ';
+			$hd_img = get_option( '_av_header_image' );
+			$form.= '<a href="#" id="av_verify_link">';
+			if($hd_img != ''){ $form.= '<img src="'.$hd_img.'" />'; } else { $form.= 'Click To Verify'; }
+			$form.= '</a>';
+			
+			break;
 			
 	};
 	
 	do_action( 'av_form_after_inputs' );
 	
+	if($input_type != 'link'){
+
 	$form .= '<p class="submit"><label for="av_verify_remember"><input type="checkbox" name="av_verify_remember" id="av_verify_remember" value="1" /> ' . esc_html__( 'Remember me', 'age_verify' ) . '</label> ';
 	
 	$form .= '<input type="submit" name="av_verify" id="av_verify" value="' . esc_attr( $submit_button_label ) . '" /></p>';
 	
+	}
+
 	$form .= '</form>';
 	
 	return apply_filters( 'av_verify_form', $form );
