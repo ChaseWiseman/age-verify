@@ -33,11 +33,9 @@
 		      // We set multiple to false so only get one image from the uploader
 		      attachment = file_frame.state().get('selection').first().toJSON();
 
-		      // Do something with attachment.id and/or attachment.url here
-
-		      console.log(attachment.url);
+		      // Do stuff with attachment.id and/or attachment.url here
 		      jQuery('#_av_header_image').val(attachment.url);
-
+		      jQuery('._av_img_container').empty().prepend('<img src="'+attachment.url+'" />');
 
 		    });
 

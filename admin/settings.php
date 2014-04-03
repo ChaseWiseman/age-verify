@@ -261,13 +261,12 @@ function av_settings_callback_imgupload_field(){ ?>
 		<legend class="screen-reader-text">
 			<span><?php esc_html_e( 'Header Image' ); ?></span>
 		</legend>
-		
-		<input type="hidden" name="_av_header_image" id="_av_header_image" value="<?php echo esc_attr( get_option( '_av_header_image' ) ); ?>" />
+		<?php $hd_img = get_option( '_av_header_image' ); ?>		
+		<input type="hidden" name="_av_header_image" id="_av_header_image" value="<?php echo esc_attr( $hd_img ); ?>" />
 		<input class="button _av_hd_uploader" name="_av_header_image_upload_button" id="_av_header_image_upload_button" value="Choose" style="width:100px; text-align:center;"/>		
-
-		<div class="_av_img_container">  </div>
-
 	</fieldset>
+
+	<div class="_av_img_container" style="margin-top:20px;"> <?php if($hd_img != ''){ ?> <img src="<?php echo $hd_img; ?>" /> <?php } ?> </div>
 
 
 <?php } 
