@@ -380,7 +380,7 @@ function av_get_verify_form() {
 			$form.= '<a href="#" id="av_verify_link">';
 			if($hd_img != ''){ $form.= '<img src="'.$hd_img.'" />'; } else { $form.= 'Click To Verify'; }
 			$form.= '</a>';
-			
+
 			break;
 			
 	};

@@ -292,6 +292,7 @@ class Age_Verify {
 			
 			
 			case 'checkbox' :
+			case 'link':
 				
 				if ( isset( $_POST['av_verify_confirm'] ) && (int) $_POST['av_verify_confirm'] == 1 )
 					$is_verified = true;
