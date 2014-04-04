@@ -36,8 +36,20 @@ function av_admin_setup() {
 		add_action( 'save_post',                   'av_save_post' );
 		
 	endif;
+
 }
-	
+
+/**
+ * Verify WP version. Used for media uploading
+ *  
+ * @since 0.2.6
+ */
+function av_get_wp_version(){
+	global $wp_version;
+	return $wp_version;
+}
+
+
 /**
  * Add the settings sections and individual settings.
  *
@@ -94,6 +106,13 @@ function av_admin_register_settings() {
  	add_settings_field( '_av_bgcolor', __( 'Background Color', 'age_verify' ), 'av_settings_callback_bgcolor_field', 'age-verify', 'av_settings_display' );
  	register_setting  ( 'age-verify', '_av_bgcolor', 'av_validate_color' );
 	
+ 	// Header Image
+ 	add_settings_field( '_av_header_image', __( 'Header Image', 'age_verify' ), 'av_settings_callback_imgupload_field', 'age-verify', 'av_settings_display' );
+ 	register_setting  ( 'age-verify', '_av_header_image', 'esc_attr' );
+
+
+
+
 	do_action( 'av_register_settings' );
 }
 
@@ -161,6 +180,13 @@ function av_admin_enqueue_scripts( $page ) {
 	wp_enqueue_style('wp-color-picker');
 	
 	wp_enqueue_script( 'av-admin-scripts', $age_verify->admin_url . '/assets/scripts.js', array( 'jquery', 'wp-color-picker' ) );
+
+	if(function_exists('wp_enqueue_media') && version_compare(av_get_wp_version(), '3.5', '>=')) {
+	   //call for new media manager
+	   wp_enqueue_media();
+	}
+
+
 }
 
 /**

@@ -181,6 +181,8 @@ function av_settings_callback_input_type_field() { ?>
 		<option value="dropdowns" <?php selected( 'dropdowns', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Date dropdowns', 'age_verify' ); ?></option>
 		<option value="inputs" <?php selected( 'inputs', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Inputs', 'age_verify' ); ?></option>
 		<option value="checkbox" <?php selected( 'checkbox', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Confirm checkbox', 'age_verify' ); ?></option>
+		<option value="link" <?php selected( 'link', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Clicking a link/button/image', 'age_verify' ); ?></option>
+
 	</select>
 	
 <?php }
@@ -248,3 +250,23 @@ function av_settings_callback_bgcolor_field() { ?>
 	</fieldset>
 	
 <?php }
+
+
+/** 
+ * Prints custom image upload field
+ * @since 0.2.6
+ */
+function av_settings_callback_imgupload_field(){ ?>
+	<fieldset>
+		<legend class="screen-reader-text">
+			<span><?php esc_html_e( 'Header Image' ); ?></span>
+		</legend>
+		<?php $hd_img = get_option( '_av_header_image' ); ?>		
+		<input type="hidden" name="_av_header_image" id="_av_header_image" value="<?php echo esc_attr( $hd_img ); ?>" />
+		<input class="button _av_hd_uploader" name="_av_header_image_upload_button" id="_av_header_image_upload_button" value="Choose" style="width:100px; text-align:center;"/>		
+	</fieldset>
+
+	<div class="_av_img_container" style="margin-top:20px;"> <?php if($hd_img != ''){ ?> <img src="<?php echo $hd_img; ?>" /> <?php } ?> </div>
+
+
+<?php } 
