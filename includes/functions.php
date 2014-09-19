@@ -1,18 +1,22 @@
 <?php
+/**
+ * Define the supporting functions.
+ *
+ * @since 0.2.6
+ *
+ * @package Age_Verify\Functions
+ */
 
-// Don't access this directly, please
-if ( ! defined( 'ABSPATH' ) ) exit;
-
-
-/***********************************************************/
-/******************** General Functions ********************/
-/***********************************************************/
+// Don't allow this file to be accessed directly.
+if ( ! defined( 'WPINC' ) ) {
+	die();
+}
 
 /**
- * Echoes the minimum age.
+ * Prints the minimum age.
  *
  * @since 0.1.0
- * @see av_get_minimum_age();
+ * @see   av_get_minimum_age();
  * 
  * @return void
  */
@@ -45,10 +49,14 @@ function av_get_minimum_age() {
 }
 
 /**
- * Returns the visitor's age. Adds compatibility for PHP 5.2
+ * Get the visitor's age based on input.
  *
  * @since 0.1.5
- * @return int
+ *
+ * @param string $year  The visitor's birth year.
+ * @param string $month The visitor's birth month.
+ * @param $day   $day   The visitor's birth day.
+ * @return int $age The calculated age.
  */
 function av_get_visitor_age( $year, $month, $day ) {
 	
@@ -111,31 +119,52 @@ function av_get_cookie_duration() {
 }
 
 /**
- * Determines if only certain content should be restricted based on settings
+ * Determines whether only certain content should be restricted.
  *
- * @since 0.2
- * @return bool
+ * @since 0.2.0
+ * 
+ * @return bool $only_content_restricted Whether the restriction is content-specific or site-wide.
  */
 function av_only_content_restricted() {
 	
-	$only_content_restricted = ( get_option( '_av_require_for' ) == 'content' ) ? true : false;
+	$only_content_restricted = ( 'content' == get_option( '_av_require_for' ) ) ? true : false;
 	
-	return (bool) apply_filters( 'av_only_content_restricted', $only_content_restricted );
+	/**
+	 * Filter whether the restriction is content-specific or site-wide.
+	 * 
+	 * @since 0.2.0
+	 * 
+	 * @param bool $only_content_restricted
+	 */
+	$only_content_restricted = apply_filters( 'av_only_content_restricted', $only_content_restricted );
+	
+	return (bool) $only_content_restricted;
 }
 
 /**
- * Determines if a certain piece of content is restricted
+ * Determines if a certain piece of content is restricted.
  *
- * @since 0.2
- * @return bool
+ * @since 0.2.0
+ *
+ * @return bool $is_restricted Whether a certain piece of content is restricted.
  */
-function av_content_is_restricted( $post_id = null ) {
-	global $post;
+function av_content_is_restricted( $id = null ) {
 	
-	if ( $post_id === null )
-		$post_id = $post->ID;
+	if ( is_null( $id ) ) {
+		$id = get_the_ID();
+	}
 	
-	$is_restricted = ( get_post_meta( $post_id, '_av_needs_verify', true ) == 1 ) ? true : false;
+	$is_restricted = ( 1 == get_post_meta( $id, '_av_needs_verify', true ) ) ? true : false;
+	
+	/**
+	 * Filter whether this content should be restricted.
+	 * 
+	 * @since 0.2.6
+	 * 
+	 * @param bool $is_restricted Whether this content should be restricted.
+	 * @param int  $id            The content's ID.
+	 */
+	$is_restricted = apply_filters( 'av_is_restricted', $is_restricted, $id );
 	
 	return $is_restricted;
 }
