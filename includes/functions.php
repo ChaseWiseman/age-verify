@@ -11,8 +11,10 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Echoes the minimum age.
  *
- * @since 0.1
- * @echo int
+ * @since 0.1.0
+ * @see av_get_minimum_age();
+ * 
+ * @return void
  */
 function av_minimum_age() {
 	
@@ -20,15 +22,26 @@ function av_minimum_age() {
 }
 
 /**
- * Returns the minimum age. You can filter this if you like.
+ * Get the minimum age to view restricted content.
  *
- * @since 0.1
- * @return int
+ * @since 0.1.0
+ * 
+ * @return int $minimum_age The minimum age to view restricted content.
  */
 function av_get_minimum_age() {
-	global $age_verify;
 	
-	return (int) apply_filters( 'av_minimum_age', $age_verify->minimum_age );
+	$minimum_age = get_option( 'av_minimum_age', 21 );
+	
+	/**
+	 * Filter the minimum age.
+	 * 
+	 * @since 0.1.0
+	 * 
+	 * @param int $minimum_age The minimum age to view restricted content.
+	 */
+	$minimum_age = apply_filters( 'av_minimum_age', $minimum_age );
+	
+	return (int) $minimum_age;
 }
 
 /**
@@ -38,7 +51,6 @@ function av_get_minimum_age() {
  * @return int
  */
 function av_get_visitor_age( $year, $month, $day ) {
-	global $age_verify;
 	
 	$age = 0;
 	
@@ -73,16 +85,29 @@ function av_get_visitor_age( $year, $month, $day ) {
 }
 
 /**
- * Returns cookie duration. This lets us know how long to keep a
- * visitor's verified cookie. You can filter this if you like.
+ * Get the cookie duration.
+ * 
+ * This lets us know how long to keep a visitor's
+ * verified cookie.
  *
- * @since 0.1
- * @return int
+ * @since 0.1.0
+ * 
+ * @return int $cookie_duration The cookie duration.
  */
 function av_get_cookie_duration() {
-	global $age_verify;
 	
-	return (int) apply_filters( 'av_cookie_duration', $age_verify->cookie_duration );
+	$cookie_duration = 720;
+	
+	/**
+	 * Filter the cookie duration.
+	 * 
+	 * @since 0.1.0
+	 * 
+	 * @param int $cookie_duration The cookie duration.
+	 */
+	$cookie_duration = apply_filters( 'av_cookie_duration', $cookie_duration );
+	
+	return (int) $cookie_duration;
 }
 
 /**
