@@ -86,7 +86,7 @@ final class Age_Verify_Admin {
 		add_action( 'admin_init', array( $this, 'register_settings' ) );
 		
 		// Add the "Settings" link to the plugin row.
-		add_filter( 'plugin_action_links', array( $this, 'add_settings_link' ), 10, 2 );
+		add_filter( 'plugin_action_links_age-verify/age-verify.php', array( $this, 'add_settings_link' ), 10 );
 		
 		// Enqueue the script.
 		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
@@ -187,22 +187,19 @@ final class Age_Verify_Admin {
 	 *
 	 * @since 0.2.6
 	 * 
-	 * @param array  $links The links beneath the plugin's name.
-	 * @param string $file  The plugin filename.
+	 * @param array  $actions The links beneath the plugin's name.
+	 * @param string $file    The plugin filename.
 	 * @return string
 	 */
-	public function add_settings_link( $links, $file ) {
+	public function add_settings_link( $actions ) {
 		
-		if ( plugin_basename( __FILE__ ) == $file ) {
-			
-			$settings_link = '<a href="' . esc_url( add_query_arg( 'page', 'age-verify', admin_url( 'options-general.php' ) ) ) . '">';
-				$settings_link .= __( 'Settings', Age_Verify::SLUG );
-			$settings_link .='</a>';
-			
-			array_unshift( $links, $settings_link );
-		}
+		$settings_link = '<a href="' . esc_url( add_query_arg( 'page', 'age-verify', admin_url( 'options-general.php' ) ) ) . '">';
+			$settings_link .= __( 'Settings', Age_Verify::SLUG );
+		$settings_link .='</a>';
 		
-		return $links;
+		array_unshift( $actions, $settings_link );
+		
+		return $actions;
 	}
 	
 	/**
