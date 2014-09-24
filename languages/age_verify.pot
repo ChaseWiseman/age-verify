@@ -1,179 +1,201 @@
-# Copyright (C) 2013 Age Verify
+# Copyright (C) 2014 Age Verify
 # This file is distributed under the same license as the Age Verify package.
 msgid ""
 msgstr ""
-"Project-Id-Version: Age Verify 0.2.3\n"
+"Project-Id-Version: Age Verify 0.2.6\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/age-verify\n"
-"POT-Creation-Date: 2013-06-21 21:35:31+00:00\n"
+"POT-Creation-Date: 2014-09-24 00:41:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2013-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2014-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 
 #: admin/admin.php:52 admin/settings.php:56
+#: includes/admin/class-age-verify-admin.php:137
+#: includes/admin/settings.php:56
 msgid "Require verification for"
 msgstr ""
 
-#: admin/admin.php:56 admin/settings.php:79
+#: admin/admin.php:56 admin/settings.php:80
+#: includes/admin/class-age-verify-admin.php:141
+#: includes/admin/settings.php:80
 msgid "Verify the age of"
 msgstr ""
 
-#: admin/admin.php:60
+#: admin/admin.php:60 includes/admin/class-age-verify-admin.php:145
 msgid "Visitors must be"
 msgstr ""
 
-#: admin/admin.php:64
+#: admin/admin.php:64 includes/admin/class-age-verify-admin.php:149
 msgid "Remember visitors for"
 msgstr ""
 
-#: admin/admin.php:67 admin/settings.php:124
+#: admin/admin.php:67 admin/settings.php:126
+#: includes/admin/class-age-verify-admin.php:152
+#: includes/admin/settings.php:126
 msgid "Membership"
 msgstr ""
 
-#: admin/admin.php:71
+#: admin/admin.php:71 includes/admin/class-age-verify-admin.php:156
 msgid "Display Options"
 msgstr ""
 
-#: admin/admin.php:74
+#: admin/admin.php:74 includes/admin/class-age-verify-admin.php:159
 msgid "Overlay Heading"
 msgstr ""
 
-#: admin/admin.php:78
+#: admin/admin.php:78 includes/admin/class-age-verify-admin.php:163
 msgid "Overlay Description"
 msgstr ""
 
-#: admin/admin.php:82
+#: admin/admin.php:82 includes/admin/class-age-verify-admin.php:167
 msgid "Verify ages using"
 msgstr ""
 
-#: admin/admin.php:86 admin/settings.php:195
+#: admin/admin.php:86 admin/settings.php:197
+#: includes/admin/class-age-verify-admin.php:171
+#: includes/admin/settings.php:197
 msgid "Styling"
 msgstr ""
 
-#: admin/admin.php:90 admin/settings.php:215
+#: admin/admin.php:90 admin/settings.php:217
+#: includes/admin/class-age-verify-admin.php:175
+#: includes/admin/settings.php:217
 msgid "Overlay Color"
 msgstr ""
 
-#: admin/admin.php:94 admin/settings.php:236
+#: admin/admin.php:94 admin/settings.php:238
+#: includes/admin/class-age-verify-admin.php:179
+#: includes/admin/settings.php:238
 msgid "Background Color"
 msgstr ""
 
-#. #-#-#-#-#  age-verify.pot (Age Verify 0.2.3)  #-#-#-#-#
+#. #-#-#-#-#  plugin.pot (Age Verify 0.2.6)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
-#: admin/admin.php:127
+#: admin/admin.php:127 includes/admin/class-age-verify-admin.php:116
+#: includes/admin/class-age-verify-admin.php:117
 msgid "Age Verify"
 msgstr ""
 
-#: admin/admin.php:142
+#: admin/admin.php:142 includes/admin/class-age-verify-admin.php:197
 msgid "Settings"
 msgstr ""
 
-#: admin/admin.php:179
+#: admin/admin.php:179 includes/admin/class-age-verify-admin.php:264
 msgid "Require age verification for this content"
 msgstr ""
 
-#: admin/settings.php:17
+#: admin/settings.php:17 includes/admin/settings.php:17
 msgid "Age Verify Settings"
 msgstr ""
 
-#: admin/settings.php:60
+#: admin/settings.php:60 includes/admin/settings.php:60
 msgid "Entire site"
 msgstr ""
 
-#: admin/settings.php:64
+#: admin/settings.php:65 includes/admin/settings.php:65
 msgid "Specific content"
 msgstr ""
 
-#: admin/settings.php:83
+#: admin/settings.php:84 includes/admin/settings.php:84
 msgid "Guests only"
 msgstr ""
 
-#: admin/settings.php:83
+#: admin/settings.php:84 includes/admin/settings.php:84
 msgid "Logged-in users will not need to verify their age."
 msgstr ""
 
-#: admin/settings.php:87
+#: admin/settings.php:89 includes/admin/settings.php:89
 msgid "All visitors"
 msgstr ""
 
-#: admin/settings.php:100
+#: admin/settings.php:102 includes/admin/settings.php:102
 msgid "years old or older to view this site"
 msgstr ""
 
-#: admin/settings.php:111
+#: admin/settings.php:113 includes/admin/settings.php:113
 msgid "minutes"
 msgstr ""
 
-#: admin/settings.php:128
+#: admin/settings.php:130 includes/admin/settings.php:130
 msgid "Require users to confirm their age before registering to this site"
 msgstr ""
 
-#: admin/settings.php:146
+#: admin/settings.php:148 includes/admin/settings.php:148
 msgid ""
 "These settings change the look of your overlay. You can use <code>%s</code> "
 "to display the minimum age number from the setting above."
 msgstr ""
 
-#: admin/settings.php:156 functions.php:182
+#: admin/settings.php:158 functions.php:182 includes/admin/settings.php:158
+#: includes/functions.php:236
 msgid "You must be %s years old to visit this site."
 msgstr ""
 
-#: admin/settings.php:167 age-verify.php:243 functions.php:205
+#: admin/settings.php:169 functions.php:205 includes/admin/settings.php:169
+#: includes/class-age-verify.php:288 includes/functions.php:259
 msgid "Please verify your age"
 msgstr ""
 
-#: admin/settings.php:179
+#: admin/settings.php:181 includes/admin/settings.php:181
 msgid "Date dropdowns"
 msgstr ""
 
-#: admin/settings.php:180
+#: admin/settings.php:182 includes/admin/settings.php:182
 msgid "Inputs"
 msgstr ""
 
-#: admin/settings.php:181
+#: admin/settings.php:183 includes/admin/settings.php:183
 msgid "Confirm checkbox"
 msgstr ""
 
-#: admin/settings.php:199
+#: admin/settings.php:201 includes/admin/settings.php:201
 msgid "Use built-in CSS on the front-end (recommended)"
 msgstr ""
 
-#: age-verify.php:243
-msgid "You must be %1s years old to view this content."
-msgstr ""
-
-#: functions.php:286
+#: functions.php:286 includes/functions.php:340
 msgid "Enter Site &raquo;"
 msgstr ""
 
-#: functions.php:299
+#: functions.php:299 includes/functions.php:353
 msgid "Sorry, something must have gone wrong. Please try again"
 msgstr ""
 
-#: functions.php:303
+#: functions.php:303 includes/functions.php:357
 msgid "Check the box to confirm your age before continuing"
 msgstr ""
 
-#: functions.php:307
+#: functions.php:307 includes/functions.php:361
 msgid "Sorry, it doesn't look like you're old enough"
 msgstr ""
 
-#: functions.php:311
+#: functions.php:311 includes/functions.php:365
 msgid "Please enter a valid date"
 msgstr ""
 
-#: functions.php:371 functions.php:421
+#: functions.php:371 functions.php:421 includes/functions.php:425
+#: includes/functions.php:475
 msgid "I am at least %s years old"
 msgstr ""
 
-#: functions.php:379
+#: functions.php:379 includes/functions.php:433
 msgid "Remember me"
 msgstr ""
 
-#: functions.php:438
+#: functions.php:438 includes/functions.php:492
 msgid "Please confirm your age"
+msgstr ""
+
+#: includes/admin/class-age-verify-admin.php:54
+#: includes/admin/class-age-verify-admin.php:65
+#: includes/class-age-verify.php:68 includes/class-age-verify.php:79
+msgid "Cheatin&#8217; huh?"
+msgstr ""
+
+#: includes/class-age-verify.php:288
+msgid "You must be %1s years old to view this content."
 msgstr ""
 
 #. Description of the plugin/theme
