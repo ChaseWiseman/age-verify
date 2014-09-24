@@ -28,8 +28,9 @@ Whatever your reasons, you may need your site's visitors to confirm their age be
 
 = 0.2.6 =
 * Major code refactor
+* Add W3 Total Cache compatibility
+* Add WordPress 4.0 compatibility
 * Documentation cleanup
-* Ensure WordPress 4.0 compatibility
 
 = 0.2.5 =
 * Added WordPress 3.8 compatibility 
