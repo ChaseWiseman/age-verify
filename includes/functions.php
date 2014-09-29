@@ -34,7 +34,7 @@ function av_minimum_age() {
  */
 function av_get_minimum_age() {
 	
-	$minimum_age = get_option( 'av_minimum_age', 21 );
+	$minimum_age = get_option( '_av_minimum_age', 21 );
 	
 	/**
 	 * Filter the minimum age.
