@@ -14,7 +14,7 @@
  * Description: A simple way to ask visitors for their age before viewing your site.
  * Author:      Chase Wiseman
  * Author URI:  http://chasewiseman.com
- * Version:     0.2.6
+ * Version:     0.2.7
  * Text Domain: age_verify
  * Domain Path: /languages/
  */
