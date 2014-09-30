@@ -206,12 +206,11 @@ final class Age_Verify_Admin {
 	 * Validates the color inputs from the settings.
 	 *
 	 * @since 0.2.6
-	 * @access private
 	 * 
 	 * @param  string $color A color hex.
 	 * @return string $color The validated color hex.
 	 */
-	private function validate_color( $color ) {
+	public function validate_color( $color ) {
 		
 		$color = preg_replace( '/[^0-9a-fA-F]/', '', $color );
 		
