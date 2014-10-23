@@ -378,21 +378,21 @@ function av_get_verify_form() {
 		// If set to date dropdowns
 		case 'dropdowns' :
 			
-			$form .= '<p><select name="av_verify_m" id="av_verify_m">';
-				
-				foreach ( range( 1, 12 ) as $month ) :
-					
-					$month_name = date( 'F', mktime( 0, 0, 0, $month, 1 ) );
-					
-					$form .= '<option value="' . $month . '">' . $month_name . '</option>';
-					
-				endforeach;
-				
-			$form .= '</select> - <select name="av_verify_d" id="av_verify_d">';
+			$form .= '<p class="select-wrap"><select name="av_verify_d" id="av_verify_d">';
 				
 				foreach ( range( 1, 31 ) as $day ) :
 					
 					$form .= '<option value="' . $day . '">' . esc_html( zeroise( $day, 2 ) ) . '</option>';
+					
+				endforeach;
+				
+			$form .= '</select> - <select name="av_verify_m" id="av_verify_m">';
+				
+				foreach ( range( 1, 12 ) as $month ) :
+					
+					$month_name = utf8_encode( strftime( '%B', mktime( 0, 0, 0, $month, 1 ) ) );
+					
+					$form .= '<option value="' . $month . '">' . $month_name . '</option>';
 					
 				endforeach;
 				
