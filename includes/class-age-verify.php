@@ -169,7 +169,7 @@ final class Age_Verify {
 		$locale = apply_filters( 'plugin_locale',  $locale, 'age_verify' );
 		$mofile = sprintf( 'age_verify-%s.mo', $locale );
 
-		$mofile_local  = plugin_dir_path( __FILE__ ) . 'languages/' . $mofile;
+		$mofile_local  = plugin_dir_path( dirname( __FILE__ ) ) . 'languages/' . $mofile;
 		$mofile_global = WP_LANG_DIR . '/age-verify/' . $mofile;
 
 		if ( file_exists( $mofile_local ) )
