@@ -3,7 +3,7 @@ Contributors: ChaseWiseman
 Tags: age, restrict, verify
 Requires at least: 3.2
 Tested up to: 4.0
-Stable tag: 0.2.7
+Stable tag: 0.2.8
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,10 @@ Whatever your reasons, you may need your site's visitors to confirm their age be
 2. This is what your visitors see, using the default styling.
 
 == Changelog ==
+
+= 0.2.8 =
+* Fixes a bug that failed to load translations properly. Props to @Nukleo!
+* Added the French translation. Props to @Nukleo!
 
 = 0.2.7 =
 * Fixes a bug that displayed the minimum age incorrectly in some cases

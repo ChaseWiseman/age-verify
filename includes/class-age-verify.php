@@ -24,7 +24,7 @@ final class Age_Verify {
 	 * 
 	 * @since 0.2.6
 	 */
-	const VERSION = '0.2.6';
+	const VERSION = '0.2.8';
 	
 	/**
 	 * The plugin slug.
