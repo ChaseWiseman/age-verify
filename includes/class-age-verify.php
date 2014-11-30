@@ -192,7 +192,7 @@ final class Age_Verify {
 	 */
 	public function enqueue_styles() {
 		
-		wp_enqueue_style( 'av-styles', plugin_dir_url( __FILE__ ) . 'assets/styles.css' );
+		wp_enqueue_style( 'av-styles', apply_filters( 'av_enqueued_style', plugin_dir_url( __FILE__ ) . 'assets/styles.css' ) );
 	}
 	
 	/**
