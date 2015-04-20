@@ -356,14 +356,14 @@ final class Age_Verify {
 			
 			setcookie( 'age-verified', 1, $cookie_duration, COOKIEPATH, COOKIE_DOMAIN, false );
 			
-			wp_redirect( $redirect_url . '?age-verified=' . wp_create_nonce( 'age-verified' ) );
+			wp_redirect( esc_url_raw( $redirect_url ) . '?age-verified=' . wp_create_nonce( 'age-verified' ) );
 			exit;
 			
 		else :
 			
 			do_action( 'av_was_not_verified' );
 			
-			wp_redirect( add_query_arg( 'verify-error', $error, $redirect_url ) );
+			wp_redirect( esc_url_raw( add_query_arg( 'verify-error', $error, $redirect_url ) ) );
 			exit;
 			
 		endif;
