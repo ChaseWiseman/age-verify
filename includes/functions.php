@@ -104,7 +104,7 @@ function av_get_visitor_age( $year, $month, $day ) {
  */
 function av_get_cookie_duration() {
 	
-	$cookie_duration = 720;
+	$cookie_duration = get_option( '_av_cookie_duration', 720 );
 	
 	/**
 	 * Filter the cookie duration.
@@ -113,9 +113,9 @@ function av_get_cookie_duration() {
 	 * 
 	 * @param int $cookie_duration The cookie duration.
 	 */
-	$cookie_duration = apply_filters( 'av_cookie_duration', $cookie_duration );
+	$cookie_duration = (int) apply_filters( 'av_cookie_duration', $cookie_duration );
 	
-	return (int) $cookie_duration;
+	return $cookie_duration;
 }
 
 /**
