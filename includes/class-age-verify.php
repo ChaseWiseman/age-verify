@@ -300,7 +300,7 @@ final class Age_Verify {
 	 */
 	public function verify() {
 		
-		if ( empty( $_POST ) || ! wp_verify_nonce( $_POST['av-nonce'], 'verify-age' ) )
+		if ( ! isset( $_POST['av-nonce'] ) || ! wp_verify_nonce( $_POST['av-nonce'], 'verify-age' ) )
 			return;
 		
 		$redirect_url = remove_query_arg( array( 'age-verified', 'verify-error' ), wp_get_referer() );
