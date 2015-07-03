@@ -2,8 +2,8 @@
 Contributors: ChaseWiseman
 Tags: age, restrict, verify
 Requires at least: 3.2
-Tested up to: 4.2-RC2
-Stable tag: 0.2.9
+Tested up to: 4.2.2
+Stable tag: 0.2.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -25,6 +25,9 @@ Whatever your reasons, you may need your site's visitors to confirm their age be
 2. This is what your visitors see, using the default styling.
 
 == Changelog ==
+
+= 0.2.10 =
+* Fix: cookie duration now uses the cooresponding setting
 
 = 0.2.9 =
 * Fix: Prevent add/remove_query_arg XSS vulnerability 
