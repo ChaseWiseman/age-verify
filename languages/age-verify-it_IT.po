@@ -1,213 +1,203 @@
-# Copyright (C) 2014 Age Verify
+# Copyright (C) 2015 Age Verify
 # This file is distributed under the same license as the Age Verify package.
 msgid ""
 msgstr ""
 "Project-Id-Version: Age Verify 0.2.6\n"
 "Report-Msgid-Bugs-To: http://wordpress.org/tag/age-verify\n"
-"POT-Creation-Date: 2014-09-24 00:41:10+00:00\n"
+"POT-Creation-Date: 2015-10-04 15:41:10+00:00\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2014-10-22 17:50+0100\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: La-fille <erik@la-fille.fr>\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"Language: fr_FR\n"
-"X-Generator: Poedit 1.6.10\n"
+"PO-Revision-Date: 2015-10-04 16:24+0200\n"
+"Last-Translator: Andrea Dalseno <adalseno@yahoo.com>\n"
+"Language-Team: Andrea Dalseno\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language: it_IT\n"
+"X-Generator: Poedit 1.8.5\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 
-#: admin/admin.php:52 admin/settings.php:56
-#: includes/admin/class-age-verify-admin.php:137
+#: admin/admin.php:52 admin/settings.php:56 includes/admin/class-age-verify-admin.php:137
 #: includes/admin/settings.php:56
 msgid "Require verification for"
-msgstr "Verification requise pour"
+msgstr "Verifica richiesta per"
 
-#: admin/admin.php:56 admin/settings.php:80
-#: includes/admin/class-age-verify-admin.php:141
+#: admin/admin.php:56 admin/settings.php:80 includes/admin/class-age-verify-admin.php:141
 #: includes/admin/settings.php:80
 msgid "Verify the age of"
-msgstr "Vérifier l'age de"
+msgstr "Verificare l'età di"
 
 #: admin/admin.php:60 includes/admin/class-age-verify-admin.php:145
 msgid "Visitors must be"
-msgstr "Age minimum"
+msgstr "Età minima"
 
 #: admin/admin.php:64 includes/admin/class-age-verify-admin.php:149
 msgid "Remember visitors for"
-msgstr "Se souvenir des visiteurs pendant"
+msgstr "Ricordare il visitatore per"
 
-#: admin/admin.php:67 admin/settings.php:126
-#: includes/admin/class-age-verify-admin.php:152
+#: admin/admin.php:67 admin/settings.php:126 includes/admin/class-age-verify-admin.php:152
 #: includes/admin/settings.php:126
 msgid "Membership"
-msgstr "Abonnement"
+msgstr "Abbonamento"
 
 #: admin/admin.php:71 includes/admin/class-age-verify-admin.php:156
 msgid "Display Options"
-msgstr "Options d'affichage"
+msgstr "Opzioni di visualizzazione"
 
 #: admin/admin.php:74 includes/admin/class-age-verify-admin.php:159
 msgid "Overlay Heading"
-msgstr "Titre de l'overlay"
+msgstr "Titolo di testa"
 
 #: admin/admin.php:78 includes/admin/class-age-verify-admin.php:163
 msgid "Overlay Description"
-msgstr "Description de l'overlay"
+msgstr "Descrizione della testata"
 
 #: admin/admin.php:82 includes/admin/class-age-verify-admin.php:167
 msgid "Verify ages using"
-msgstr "Vérifier l'age avec"
+msgstr "Verificare l'età con"
 
-#: admin/admin.php:86 admin/settings.php:197
-#: includes/admin/class-age-verify-admin.php:171
+#: admin/admin.php:86 admin/settings.php:197 includes/admin/class-age-verify-admin.php:171
 #: includes/admin/settings.php:197
 msgid "Styling"
-msgstr "Stylage"
+msgstr "Stile"
 
-#: admin/admin.php:90 admin/settings.php:217
-#: includes/admin/class-age-verify-admin.php:175
+#: admin/admin.php:90 admin/settings.php:217 includes/admin/class-age-verify-admin.php:175
 #: includes/admin/settings.php:217
 msgid "Overlay Color"
-msgstr "Couleur d'overlay"
+msgstr "Colore della finestra"
 
-#: admin/admin.php:94 admin/settings.php:238
-#: includes/admin/class-age-verify-admin.php:179
+#: admin/admin.php:94 admin/settings.php:238 includes/admin/class-age-verify-admin.php:179
 #: includes/admin/settings.php:238
 msgid "Background Color"
-msgstr "Couleur d'arrière plan"
+msgstr "Colore di fondo"
 
 #. Plugin Name of the plugin/theme
 #: admin/admin.php:127 includes/admin/class-age-verify-admin.php:116
 #: includes/admin/class-age-verify-admin.php:117
 msgid "Age Verify"
-msgstr "Vérification d'age"
+msgstr "Verifica dell'età"
 
 #: admin/admin.php:142 includes/admin/class-age-verify-admin.php:197
 msgid "Settings"
-msgstr "Réglages"
+msgstr "Impostazioni"
 
 #: admin/admin.php:179 includes/admin/class-age-verify-admin.php:264
 msgid "Require age verification for this content"
-msgstr "Vérification d'age requise pour ce contenu"
+msgstr "Verifica dell'età richiesta per questo contenuto"
 
 #: admin/settings.php:17 includes/admin/settings.php:17
 msgid "Age Verify Settings"
-msgstr "Réglages Age Verify"
+msgstr "Impostazioni Verifica Età"
 
 #: admin/settings.php:60 includes/admin/settings.php:60
 msgid "Entire site"
-msgstr "Tout le site"
+msgstr "Tutto il sito"
 
 #: admin/settings.php:65 includes/admin/settings.php:65
 msgid "Specific content"
-msgstr "Du contenu spécifique"
+msgstr "Contenuto specifico"
 
 #: admin/settings.php:84 includes/admin/settings.php:84
 msgid "Guests only"
-msgstr "Visiteurs non connectés"
+msgstr "Solo ospiti"
 
 #: admin/settings.php:84 includes/admin/settings.php:84
 msgid "Logged-in users will not need to verify their age."
-msgstr "Les utilisateurs connectés n'auront pas besoin de vérifier leur age"
+msgstr "I visitatori connessi non avranno bisogno di verificare l'età"
 
 #: admin/settings.php:89 includes/admin/settings.php:89
 msgid "All visitors"
-msgstr "Tous les visteurs"
+msgstr "Tutti i visitatori"
 
 #: admin/settings.php:102 includes/admin/settings.php:102
 msgid "years old or older to view this site"
-msgstr "ans ou plus pour visiter ce site"
+msgstr "anni o più per visitare questo sito"
 
 #: admin/settings.php:113 includes/admin/settings.php:113
 msgid "minutes"
-msgstr "minutes"
+msgstr "minuti"
 
 #: admin/settings.php:130 includes/admin/settings.php:130
 msgid "Require users to confirm their age before registering to this site"
-msgstr "Vérification d'age requise avant d'enregistrer un utilisateur"
+msgstr "Verifica dell'età richiesta prima di registrare un utente"
 
 #: admin/settings.php:148 includes/admin/settings.php:148
 msgid ""
-"These settings change the look of your overlay. You can use <code>%s</code> "
-"to display the minimum age number from the setting above."
+"These settings change the look of your overlay. You can use <code>%s</code> to display the "
+"minimum age number from the setting above."
 msgstr ""
-"Ces réglages changent l'aspect de l'overlay. Vous pouvez utilisez <code>%s</"
-"code> pour afficher l'age minimum des paramètres ci-dessus"
+"Queste impostazioni cambieranno l'aspetto della finestra. Potete utilizzare <code>%s</"
+"code> per stabilire l'età minima dei parametri qui sopra"
 
 #: admin/settings.php:158 functions.php:182 includes/admin/settings.php:158
 #: includes/functions.php:236
 msgid "You must be %s years old to visit this site."
-msgstr "Vous devez avoir %s ans pour visiter ce site."
+msgstr "Dovete avere %s anni per visitare questo sito."
 
 #: admin/settings.php:169 functions.php:205 includes/admin/settings.php:169
 #: includes/class-age-verify.php:288 includes/functions.php:259
 msgid "Please verify your age"
-msgstr "Vérifiez votre age"
+msgstr "Verificate la vostra età"
 
 #: admin/settings.php:181 includes/admin/settings.php:181
 msgid "Date dropdowns"
-msgstr "Dropdowns de date"
+msgstr "Menù a discesa delle date"
 
 #: admin/settings.php:182 includes/admin/settings.php:182
 msgid "Inputs"
-msgstr "Champs texte"
+msgstr "Campi di testo"
 
 #: admin/settings.php:183 includes/admin/settings.php:183
 msgid "Confirm checkbox"
-msgstr "Case à cocher"
+msgstr "Casella di conferma"
 
 #: admin/settings.php:201 includes/admin/settings.php:201
 msgid "Use built-in CSS on the front-end (recommended)"
-msgstr "Utiliser les CSS en front (recommandé)"
+msgstr "Utilizzare i CSS del front-end (raccomandato)"
 
 #: functions.php:286 includes/functions.php:340
 msgid "Enter Site &raquo;"
-msgstr "Entrer dans le site"
+msgstr "Entrare nel sito"
 
 #: functions.php:299 includes/functions.php:353
 msgid "Sorry, something must have gone wrong. Please try again"
-msgstr "Désolé, quelque chose n'a pas fonctionné. Veuillez réessayer"
+msgstr "Spiacente, qualcosa non ha funzionato. Si prega di riprovare"
 
 #: functions.php:303 includes/functions.php:357
 msgid "Check the box to confirm your age before continuing"
-msgstr "Cochez la case pour confirmer votre age avant de continuer"
+msgstr "Spuntate la casella per confermare la vostra età prima di continuare"
 
 #: functions.php:307 includes/functions.php:361
 msgid "Sorry, it doesn't look like you're old enough"
-msgstr "Désolé, vous ne semblez pas assez agé"
+msgstr "Spiacente, sembra che tu non abbia l'età giusta"
 
 #: functions.php:311 includes/functions.php:365
 msgid "Please enter a valid date"
-msgstr "Entrez une date valide"
+msgstr "Si prega di immettere una data valida"
 
-#: functions.php:371 functions.php:421 includes/functions.php:425
-#: includes/functions.php:475
+#: functions.php:371 functions.php:421 includes/functions.php:425 includes/functions.php:475
 msgid "I am at least %s years old"
-msgstr "J'ai au moins %s ans"
+msgstr "Ho almeno %s anni"
 
 #: functions.php:379 includes/functions.php:433
 msgid "Remember me"
-msgstr "Se souvenir de moi"
+msgstr "Ricordami"
 
 #: functions.php:438 includes/functions.php:492
 msgid "Please confirm your age"
-msgstr "Merci de confirmer votre age"
+msgstr "Si prega di confermare la propria età"
 
-#: includes/admin/class-age-verify-admin.php:54
-#: includes/admin/class-age-verify-admin.php:65
+#: includes/admin/class-age-verify-admin.php:54 includes/admin/class-age-verify-admin.php:65
 #: includes/class-age-verify.php:68 includes/class-age-verify.php:79
 msgid "Cheatin&#8217; huh?"
-msgstr "Alors, on triche ?"
+msgstr "Dunque, imbrogliamo?"
 
 #: includes/class-age-verify.php:288
 msgid "You must be %1s years old to view this content."
-msgstr "Vous devez avoir %1s ans pour voir ce contenu."
+msgstr "Dovete avere %1s anni per vedere questo contenuto."
 
 #. Description of the plugin/theme
 msgid "A simple way to ask visitors for their age before viewing your site."
-msgstr ""
-"Une manière simple de demander aux visiteurs leur age avant de visiter le "
-"site"
+msgstr "Un modo semplice per domandare ai visitatori la loro età prima di visitare il sito"
 
 #. Author of the plugin/theme
 msgid "Chase Wiseman"

@@ -14,7 +14,7 @@ function av_settings_page() { ?>
 
 		<?php screen_icon(); ?>
 
-		<h2><?php esc_html_e( 'Age Verify Settings', 'age_verify' ) ?></h2>
+		<h2><?php esc_html_e( 'Age Verify Settings', 'age-verify' ) ?></h2>
 
 		<form action="options.php" method="post">
 
@@ -53,16 +53,16 @@ function av_settings_callback_require_for_field() { ?>
 	
 	<fieldset>
 		<legend class="screen-reader-text">
-			<span><?php esc_html_e( 'Require verification for', 'age_verify' ); ?></span>
+			<span><?php esc_html_e( 'Require verification for', 'age-verify' ); ?></span>
 		</legend>
 		<label>
 			<input type="radio" name="_av_require_for" value="site" <?php checked( 'site', get_option( '_av_require_for', 'site' ) ); ?>/>
-			 <?php esc_html_e( 'Entire site', 'age_verify' ); ?><br />
+			 <?php esc_html_e( 'Entire site', 'age-verify' ); ?><br />
 		</label>
 		<br />
 		<label>
 			<input type="radio" name="_av_require_for" value="content" <?php checked( 'content', get_option( '_av_require_for', 'site' ) ); ?>/>
-			 <?php esc_html_e( 'Specific content', 'age_verify' ); ?>
+			 <?php esc_html_e( 'Specific content', 'age-verify' ); ?>
 		</label>
 	</fieldset>
 	
@@ -77,16 +77,16 @@ function av_settings_callback_always_verify_field() { ?>
 	
 	<fieldset>
 		<legend class="screen-reader-text">
-			<span><?php esc_html_e( 'Verify the age of', 'age_verify' ); ?></span>
+			<span><?php esc_html_e( 'Verify the age of', 'age-verify' ); ?></span>
 		</legend>
 		<label>
 			<input type="radio" name="_av_always_verify" value="guests" <?php checked( 'guests', get_option( '_av_always_verify', 'guests' ) ); ?>/>
-			 <?php esc_html_e( 'Guests only', 'age_verify' ); ?> <span class="description"><?php esc_html_e( 'Logged-in users will not need to verify their age.', 'age_verify' ); ?></span><br />
+			 <?php esc_html_e( 'Guests only', 'age-verify' ); ?> <span class="description"><?php esc_html_e( 'Logged-in users will not need to verify their age.', 'age-verify' ); ?></span><br />
 		</label>
 		<br />
 		<label>
 			<input type="radio" name="_av_always_verify" value="all" <?php checked( 'all', get_option( '_av_always_verify', 'guests' ) ); ?>/>
-			 <?php esc_html_e( 'All visitors', 'age_verify' ); ?>
+			 <?php esc_html_e( 'All visitors', 'age-verify' ); ?>
 		</label>
 	</fieldset>
 	
@@ -99,7 +99,7 @@ function av_settings_callback_always_verify_field() { ?>
  */
 function av_settings_callback_minimum_age_field() { ?>
 	
-	<input name="_av_minimum_age" type="number" id="_av_minimum_age" step="1" min="10" class="small-text" value="<?php echo esc_attr( get_option( '_av_minimum_age', '21' ) ); ?>" /> <?php esc_html_e( 'years old or older to view this site', 'age_verify' ); ?>
+	<input name="_av_minimum_age" type="number" id="_av_minimum_age" step="1" min="10" class="small-text" value="<?php echo esc_attr( get_option( '_av_minimum_age', '21' ) ); ?>" /> <?php esc_html_e( 'years old or older to view this site', 'age-verify' ); ?>
 	
 <?php }
 
@@ -110,7 +110,7 @@ function av_settings_callback_minimum_age_field() { ?>
  */
 function av_settings_callback_cookie_duration_field() { ?>
 	
-	<input name="_av_cookie_duration" type="number" id="_av_cookie_duration" step="15" min="15" class="small-text" value="<?php echo esc_attr( get_option( '_av_cookie_duration', '720' ) ); ?>" /> <?php esc_html_e( 'minutes', 'age_verify' ); ?>
+	<input name="_av_cookie_duration" type="number" id="_av_cookie_duration" step="15" min="15" class="small-text" value="<?php echo esc_attr( get_option( '_av_cookie_duration', '720' ) ); ?>" /> <?php esc_html_e( 'minutes', 'age-verify' ); ?>
 	
 <?php }
 
@@ -123,11 +123,11 @@ function av_settings_callback_membership_field() { ?>
 	
 	<fieldset>
 		<legend class="screen-reader-text">
-			<span><?php esc_html_e( 'Membership', 'age_verify' ); ?></span>
+			<span><?php esc_html_e( 'Membership', 'age-verify' ); ?></span>
 		</legend>
 		<label for="_av_membership">
 			<input name="_av_membership" type="checkbox" id="_av_membership" value="1" <?php checked( 1, get_option( '_av_membership', 1 ) ); ?>/>
-			 <?php esc_html_e( 'Require users to confirm their age before registering to this site', 'age_verify' ); ?>
+			 <?php esc_html_e( 'Require users to confirm their age before registering to this site', 'age-verify' ); ?>
 		</label>
 	</fieldset>
 	
@@ -145,7 +145,7 @@ function av_settings_callback_membership_field() { ?>
  */
 function av_settings_callback_section_display() {
 	
-	echo '<p>' . esc_html__( 'These settings change the look of your overlay. You can use <code>%s</code> to display the minimum age number from the setting above.', 'age_verify' ) . '</p>';
+	echo '<p>' . esc_html__( 'These settings change the look of your overlay. You can use <code>%s</code> to display the minimum age number from the setting above.', 'age-verify' ) . '</p>';
 }
 
 /**
@@ -155,7 +155,7 @@ function av_settings_callback_section_display() {
  */
 function av_settings_callback_heading_field() { ?>
 	
-	<input name="_av_heading" type="text" id="_av_heading" value="<?php echo esc_attr( get_option( '_av_heading', __( 'You must be %s years old to visit this site.', 'age_verify' ) ) ); ?>" class="regular-text" />
+	<input name="_av_heading" type="text" id="_av_heading" value="<?php echo esc_attr( get_option( '_av_heading', __( 'You must be %s years old to visit this site.', 'age-verify' ) ) ); ?>" class="regular-text" />
 	
 <?php }
 
@@ -166,7 +166,7 @@ function av_settings_callback_heading_field() { ?>
  */
 function av_settings_callback_description_field() { ?>
 	
-	<input name="_av_description" type="text" id="_av_description" value="<?php echo esc_attr( get_option( '_av_description', __( 'Please verify your age', 'age_verify' ) ) ); ?>" class="regular-text" />
+	<input name="_av_description" type="text" id="_av_description" value="<?php echo esc_attr( get_option( '_av_description', __( 'Please verify your age', 'age-verify' ) ) ); ?>" class="regular-text" />
 	
 <?php }
 
@@ -178,9 +178,9 @@ function av_settings_callback_description_field() { ?>
 function av_settings_callback_input_type_field() { ?>
 	
 	<select name="_av_input_type" id="_av_input_type">
-		<option value="dropdowns" <?php selected( 'dropdowns', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Date dropdowns', 'age_verify' ); ?></option>
-		<option value="inputs" <?php selected( 'inputs', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Inputs', 'age_verify' ); ?></option>
-		<option value="checkbox" <?php selected( 'checkbox', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Confirm checkbox', 'age_verify' ); ?></option>
+		<option value="dropdowns" <?php selected( 'dropdowns', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Date dropdowns', 'age-verify' ); ?></option>
+		<option value="inputs" <?php selected( 'inputs', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Inputs', 'age-verify' ); ?></option>
+		<option value="checkbox" <?php selected( 'checkbox', get_option( '_av_input_type', 'dropdowns' ) ); ?>><?php esc_html_e( 'Confirm checkbox', 'age-verify' ); ?></option>
 	</select>
 	
 <?php }
@@ -194,11 +194,11 @@ function av_settings_callback_styling_field() { ?>
 	
 	<fieldset>
 		<legend class="screen-reader-text">
-			<span><?php esc_html_e( 'Styling', 'age_verify' ); ?></span>
+			<span><?php esc_html_e( 'Styling', 'age-verify' ); ?></span>
 		</legend>
 		<label for="_av_styling">
 			<input name="_av_styling" type="checkbox" id="_av_styling" value="1" <?php checked( 1, get_option( '_av_styling', 1 ) ); ?>/>
-			 <?php esc_html_e( 'Use built-in CSS on the front-end (recommended)', 'age_verify' ); ?>
+			 <?php esc_html_e( 'Use built-in CSS on the front-end (recommended)', 'age-verify' ); ?>
 		</label>
 	</fieldset>
 	
@@ -214,7 +214,7 @@ function av_settings_callback_overlay_color_field() { ?>
 	<fieldset>
 		
 		<legend class="screen-reader-text">
-			<span><?php esc_html_e( 'Overlay Color', 'age_verify' ); ?></span>
+			<span><?php esc_html_e( 'Overlay Color', 'age-verify' ); ?></span>
 		</legend>
 		
 		<?php $default_color = ' data-default-color="#fff"'; ?>

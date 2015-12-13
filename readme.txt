@@ -2,8 +2,8 @@
 Contributors: ChaseWiseman
 Tags: age, restrict, verify
 Requires at least: 3.2
-Tested up to: 4.2.2
-Stable tag: 0.2.10
+Tested up to: 4.4
+Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,11 +26,15 @@ Whatever your reasons, you may need your site's visitors to confirm their age be
 
 == Changelog ==
 
+= 0.3.0 =
+* New: French and Italian translations
+* Tweak: Use strings for the textdomain and change to 'age-verify'
+
 = 0.2.10 =
 * Fix: cookie duration now uses the cooresponding setting
 
 = 0.2.9 =
-* Fix: Prevent add/remove_query_arg XSS vulnerability 
+* Fix: Prevent add/remove_query_arg XSS vulnerability
 
 = 0.2.8 =
 * Fixes a bug that failed to load translations properly. Props to @Nukleo!
@@ -47,7 +51,7 @@ Whatever your reasons, you may need your site's visitors to confirm their age be
 * Documentation cleanup
 
 = 0.2.5 =
-* Added WordPress 3.8 compatibility 
+* Added WordPress 3.8 compatibility
 * Fixed a bit of text domain loading
 * Added additional actions for further extensibility
 * Adjusted some default modal styling
