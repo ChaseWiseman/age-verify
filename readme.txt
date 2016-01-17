@@ -2,7 +2,7 @@
 Contributors: ChaseWiseman
 Tags: age, restrict, verify
 Requires at least: 3.2
-Tested up to: 4.4
+Tested up to: 4.4.1
 Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -31,7 +31,7 @@ Whatever your reasons, you may need your site's visitors to confirm their age be
 * Tweak: Use strings for the textdomain and change to 'age-verify'
 
 = 0.2.10 =
-* Fix: cookie duration now uses the cooresponding setting
+* Fix: cookie duration now uses the corresponding setting
 
 = 0.2.9 =
 * Fix: Prevent add/remove_query_arg XSS vulnerability
