@@ -348,8 +348,10 @@ final class Age_Verify {
 				$cookie_duration = 0;
 
 			setcookie( 'age-verified', 1, $cookie_duration, COOKIEPATH, COOKIE_DOMAIN, false );
+			
+			$join = (strpos($redirect_url, '?')) ? '&' : '?' ;
 
-			wp_redirect( esc_url_raw( $redirect_url ) . '?age-verified=' . wp_create_nonce( 'age-verified' ) );
+			wp_redirect( esc_url_raw( $redirect_url ) . $join . 'age-verified=' . wp_create_nonce( 'age-verified' ) );
 			exit;
 
 		else :
