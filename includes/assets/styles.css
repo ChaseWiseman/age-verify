@@ -50,7 +50,7 @@
 }
 
 /* Minimum width of 400 pixels. */
-@media screen and (min-width: 400px) {
+@media screen and (min-width: 1060px) {
 	
 	#av-overlay {
 		position: relative;
