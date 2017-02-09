@@ -237,6 +237,8 @@ final class Age_Verify {
 			<?php do_action( 'av_before_modal' ); ?>
 
 			<div id="av-overlay">
+				
+				<?php echo apply_filters('av_before_heading', ''); ?>
 
 				<h1><?php esc_html_e( av_get_the_heading() ); ?></h1>
 
