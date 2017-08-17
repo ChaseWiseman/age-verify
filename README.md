@@ -1,7 +1,7 @@
 
 # Age Verify
 [![WordPress](https://img.shields.io/wordpress/v/akismet.svg)](https://wordpress.org/download/)
- [![version](https://img.shields.io/badge/stable-v0.1.0-4A8F80.svg)](https://wordpress.org/plugins/wp-drinking-age/)
+ [![version](https://img.shields.io/badge/stable-v0.3.1-4A8F80.svg)](https://wordpress.org/plugins/wp-drinking-age/)
  [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
  
 
