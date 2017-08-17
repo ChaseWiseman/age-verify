@@ -10,8 +10,8 @@ This plugin is a fork of Chase Wiseman's popular [age-verify plugin](https://git
 
 
 ## Installation
- 1. Upload the plugin file to '/wp-content/plugins/' directory or upload the [zip](https://github.com/d0n601/WP-Drinking-Age/archive/master.zip) file through the plugins section of the admin panel
+ 1. Upload the plugin file to '/wp-content/plugins/' directory or upload the [zip](https://github.com/d0n601/age-verify/archive/master.zip) file through the plugins section of the admin panel
  2. Activate the plugin through 'Plugins' menu in WordPress admin
- 3. Adjust plugin's settings by going to  **Settings->WP Drinking Age**
- 4. Now enjoy WP Drinking Age Gateway!
+ 3. Adjust plugin's settings by going to  **Settings->Age Verify**
+ 4. Now enjoy your Age Gateway!
 
