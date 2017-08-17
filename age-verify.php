@@ -4,17 +4,17 @@
  *
  * This file loads the main plugin class and gets things running.
  *
- * @since 0.2.6
+ * @since 0.3.1
  *
  * @package Age_Verify
  */
 
 /**
- * Plugin Name: Age Verify
+ * Plugin Name: Age Verify Fork
  * Description: A simple way to ask visitors for their age before viewing your site.
- * Author:      Chase Wiseman
- * Author URI:  http://chasewiseman.com
- * Version:     0.3.0
+ * Author:      Ryan Kozak
+ * Author URI:  https://ryankozak.com
+ * Version:     0.3.1
  * Text Domain: age-verify
  * Domain Path: /languages
  */
