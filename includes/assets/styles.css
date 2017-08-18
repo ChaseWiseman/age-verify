@@ -49,8 +49,8 @@
 	        border-radius: 3px;
 }
 
-/* Minimum width of 400 pixels. */
-@media screen and (min-width: 400px) {
+/* Minimum width of 416 pixels. */
+@media screen and (min-width: 416px) {
 	
 	#av-overlay {
 		position: relative;
