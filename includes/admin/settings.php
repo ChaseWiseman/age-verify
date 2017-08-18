@@ -6,13 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) exit;
 /**
  * Define the settings page.
  *
- * @since 0.1
+ * @since 0.3.1
  */
 function av_settings_page() { ?>
 
 	<div class="wrap">
-
-		<?php screen_icon(); ?>
 
 		<h2><?php esc_html_e( 'Age Verify Settings', 'age-verify' ) ?></h2>
 
@@ -203,6 +201,29 @@ function av_settings_callback_styling_field() { ?>
 	</fieldset>
 	
 <?php }
+
+
+/**
+ * Prints the scrollbar settings field.
+ *
+ * @since 0.3.1
+ */
+function av_settings_callback_scroll_field() { ?>
+
+    <fieldset>
+        <legend class="screen-reader-text">
+            <span><?php esc_html_e( 'Styling', 'age-verify' ); ?></span>
+        </legend>
+        <label for="_av_scroll">
+            <input name="_av_scroll" type="checkbox" id="_av_scroll" value="1" <?php checked( 1, get_option( '_av_scroll', 1 ) ); ?>/>
+			<?php esc_html_e( 'Disable scrollbar when gateway is present', 'age-verify' ); ?>
+        </label>
+    </fieldset>
+
+<?php }
+
+
+
 
 /**
  * Prints the overlay color settings field.

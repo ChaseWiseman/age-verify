@@ -1,8 +1,8 @@
 === Age Verify ===
-Contributors: ChaseWiseman
+Contributors: Ryan Kozak, ChaseWiseman
 Tags: age, restrict, verify
 Requires at least: 3.2
-Tested up to: 4.4.1
+Tested up to: 4.8.1
 Stable tag: 0.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -25,6 +25,9 @@ Whatever your reasons, you may need your site's visitors to confirm their age be
 2. This is what your visitors see, using the default styling.
 
 == Changelog ==
+
+= 0.3.1 =
+* Option to disable scrollbar when gateway is present.
 
 = 0.3.0 =
 * New: French and Italian translations

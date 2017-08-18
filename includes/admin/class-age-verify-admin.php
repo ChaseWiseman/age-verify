@@ -2,7 +2,7 @@
 /**
  * Define the admin class
  *
- * @since 0.2.6
+ * @since 0.3.1
  *
  * @package Age_Verify\Admin
  */
@@ -170,6 +170,10 @@ final class Age_Verify_Admin {
 	 	// Enable CSS
 	 	add_settings_field( '_av_styling', __( 'Styling', 'age-verify' ), 'av_settings_callback_styling_field', 'age-verify', 'av_settings_display' );
 	 	register_setting  ( 'age-verify', '_av_styling', 'intval' );
+
+		// Disable Scrollbar
+		add_settings_field( '_av_scroll', __( 'Scroll', 'age-verify' ), 'av_settings_callback_scroll_field', 'age-verify', 'av_settings_display' );
+		register_setting  ( 'age-verify', '_av_scroll', 'intval' );
 
 	 	// Overlay Color
 	 	add_settings_field( '_av_overlay_color', __( 'Overlay Color', 'age-verify' ), 'av_settings_callback_overlay_color_field', 'age-verify', 'av_settings_display' );

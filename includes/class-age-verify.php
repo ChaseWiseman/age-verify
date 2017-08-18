@@ -2,7 +2,7 @@
 /**
  * Define the main plugin class
  *
- * @since 0.2.6
+ * @since 0.3.1
  *
  * @package Age_Verify
  */
@@ -233,6 +233,15 @@ final class Age_Verify {
 		define( 'DONOTCACHEPAGE', true ); ?>
 
 		<div id="av-overlay-wrap">
+
+            <?php if(get_option('_av_scroll', 1)): ?>
+                <style>
+                    html,body {
+                        height:100%;
+                        overflow:hidden;
+                    }
+                </style>
+            <?php endif; ?>
 
 			<?php do_action( 'av_before_modal' ); ?>
 
